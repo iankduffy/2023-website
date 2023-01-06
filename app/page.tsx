@@ -1,6 +1,6 @@
-import { AboutSection } from "components/shared/homepage/about";
-import { Hero } from "components/shared/homepage/hero";
-import { SkillsSection } from "components/shared/homepage/skills";
+import { AboutSection } from "components/homepage/about";
+import { Hero } from "components/homepage/hero";
+import { SkillsSection } from "components/homepage/skills";
 
 export default function Home() {
   return (
