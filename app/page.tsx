@@ -1,7 +1,13 @@
+import { AboutSection } from "components/shared/homepage/about";
+import { Hero } from "components/shared/homepage/hero";
+import { SkillsSection } from "components/shared/homepage/skills";
+
 export default function Home() {
   return (
     <main>
-      <h1 className='bg-red-700'>Hello World</h1>
+      <Hero />
+      <SkillsSection />
+      <AboutSection />
     </main>
   )
 }
