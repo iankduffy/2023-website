@@ -9,7 +9,7 @@ export function ArticleHeader() {
     <section className='container mx-auto mt-10'>
       <div className='px-4 mb-4'>
         <h1 className='mb-3 text-3xl font-bold text-white uppercase lg:text-5xl'>{title}</h1>
-        <div className='flex justify-between font-bold uppercase text-light'>
+        <div className='flex gap-6 font-bold uppercase text-light'>
           <p>{date}</p>
           <p>{readTime}</p>
         </div>
