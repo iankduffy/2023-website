@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: [
@@ -11,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         brandBackground: '#152233',
+        brandLight: '#21354F',
         light: '#AFB9C6',
       },
       gridTemplateColumns: {
@@ -18,5 +20,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant('not-last', '&:not(:last-of-type)');
+    }),
+  ],
 };

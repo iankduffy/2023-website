@@ -7,11 +7,11 @@ export function Header({ }): JSX.Element {
     <header className='relative'>
       <div className='container flex items-center justify-between gap-5 px-3 py-5 mx-auto text-white'>
         <nav className='w-1/5 lg:order-2 lg:w-full lg:text-center'><Navigation /></nav>
-        <div className='lg:w-1/5'>
+        <Link href='/' className='lg:w-1/5'>
           <img src="/logo.svg" width="50" height="50" alt="Ian Duffy Logo" className='' />
-        </div>
+        </Link>
         <div className='w-1/5 text-right lg:order-3'>
-          <Link href='https://github.com/iankduffy' target='_blank' className='px-5 py-2 bg-black rounded-full'>Github</Link>
+          <Link href='https://github.com/iankduffy' target='_blank' className='px-5 py-2 bg-[#223854] rounded-full hover:bg-[#21354F] transition'>Github</Link>
         </div>
       </div>
     </header>

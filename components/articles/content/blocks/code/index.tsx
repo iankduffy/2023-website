@@ -16,7 +16,7 @@ export function CodeBlock() {
     <Refractor
       language={'scss'}
       value={code}
-      className='p-3 mx-4 mb-4 overflow-x-scroll bg-blue-800 rounded lg:mx-0'
+      className='p-3 mx-4 mb-4 overflow-x-scroll rounded bg-brandLight lg:mx-0'
     />
   )
 }

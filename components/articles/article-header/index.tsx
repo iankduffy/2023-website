@@ -14,7 +14,7 @@ export function ArticleHeader() {
           <p>{readTime}</p>
         </div>
       </div>
-      <img className='mx-auto overflow-hidden lg:rounded-lg lg:px-4 lg:container' src={'https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1790&q=80'} width={1790} loading={'eager'} fetchpriority='high' />
+      <img className='mx-auto overflow-hidden lg:rounded-lg lg:px-4 lg:container' src={'https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1790&q=80'} width={1790} height={1167} loading={'eager'} fetchpriority='high' />
     </section>
   )
 }

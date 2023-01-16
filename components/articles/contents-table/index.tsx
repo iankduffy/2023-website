@@ -3,7 +3,7 @@
 export function MobileContentTable() {
   return (
     <div className='container px-4 mx-auto my-5 lg:hidden'>
-      <details className='p-2 bg-blue-900 rounded text-light '>
+      <details className='p-2 text-white rounded bg-brandLight '>
         <summary className=''>Table of Contents</summary>
         <div>
           Table of contents

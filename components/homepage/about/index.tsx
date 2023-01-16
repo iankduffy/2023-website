@@ -1,4 +1,4 @@
-const imageURL = '/logo.svg'
+const imageURL = '/me.webp'
 
 export function AboutSection({ }) {
   return (
