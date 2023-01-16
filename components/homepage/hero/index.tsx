@@ -1,8 +1,9 @@
 import { HeroLinks } from "./links";
 
+// Todo: Get h-screen to ignore the header
 export function Hero({ }) {
   return (
-    <section className='container h-screen px-3 pt-20 mx-auto'>
+    <section className='container flex flex-col justify-between h-screen px-3 pt-20 mx-auto'>
       <div>
         <p className='text-2xl font-bold uppercase text-light lg:text-4xl'>Hello I am Ian Duffy</p>
         <h1 className='my-2 text-6xl font-bold text-white uppercase lg:text-8xl'>

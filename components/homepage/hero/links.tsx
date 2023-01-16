@@ -17,10 +17,10 @@ export function HeroLinks(): JSX.Element | null {
   if (!links.length) return null
 
   return (
-    <ul>
+    <ul className='flex justify-center gap-10 py-5 uppercase border-b text-light border-light'>
       {links.map((link, key) => {
         return (
-          <li>
+          <li className='font-bold transition-colors hover:text-white'>
             <Link href={link.href} key={key}>
               {link.label}
             </Link>

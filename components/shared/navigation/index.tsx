@@ -2,6 +2,10 @@ import Link from "next/link"
 
 const items = [
   {
+    label: 'Home',
+    href: '/'
+  },
+  {
     label: 'Articles',
     href: '/articles'
   }
@@ -24,7 +28,7 @@ export function Navigation() {
         </div>
       </details>
       {/* Desktop Navigation */}
-      <div className='justify-center hidden lg:flex'>
+      <div className='justify-center hidden gap-4 lg:flex'>
         {items.map((item, key) => {
           return (
             <Link href={item.href} className='p-5 text-white border-b' key={key}>
