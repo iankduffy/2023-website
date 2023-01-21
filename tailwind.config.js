@@ -23,7 +23,10 @@ module.exports = {
   plugins: [
     plugin(function ({ addVariant }) {
       addVariant('not-last', '&:not(:last-of-type)');
-      addVariant('sibling-hover', '&:has(~ *:hover)');
+      addVariant(
+        'sibling-hover',
+        '&:has(.child:hover) .child:is(:not(:hover, :focus))'
+      );
     }),
   ],
 };

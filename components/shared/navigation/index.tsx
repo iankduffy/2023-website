@@ -17,7 +17,7 @@ export function Navigation() {
       {/* Mobile Navigation */}
       <details className='lg:hidden'>
         <summary>Navigation</summary>
-        <div className='absolute left-0 z-10 w-screen h-screen px-3 py-5 text-white top-full bg-brandBackground'>
+        <div className='absolute left-0 z-10 flex flex-col w-screen h-screen gap-4 px-3 py-5 text-white top-full bg-brandBackground'>
           {items.map((item, key) => {
             return (
               <Link href={item.href} className='text-2xl font-bold text-white' key={key}>
@@ -28,10 +28,10 @@ export function Navigation() {
         </div>
       </details>
       {/* Desktop Navigation */}
-      <div className='justify-center hidden gap-4 lg:flex'>
+      <div className='justify-center hidden lg:flex'>
         {items.map((item, key) => {
           return (
-            <Link href={item.href} className='p-5 text-white border-b' key={key}>
+            <Link href={item.href} className='px-8 py-10 text-white transition duration-500 hover:bg-brandLight' key={key}>
               {item.label}
             </Link>
           )
