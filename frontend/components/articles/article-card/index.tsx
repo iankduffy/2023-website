@@ -10,10 +10,8 @@ interface Props {
 }
 
 export function ArticleCard({ title, description = '', slug, _createdAt, estimatedReadingTime }: Props) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const publishedDate = new Date(_createdAt).toLocaleDateString('en-GB', options)
+  const publishedDate = new Date(_createdAt).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
 
-  console.log(slug)
   return (
     <Link href={`/articles/${slug.current}`} className='block py-4 not-last:border-b border-light'>
       <h3 className="mb-2 text-2xl font-bold">{title}</h3>
