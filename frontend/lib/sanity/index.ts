@@ -1,5 +1,7 @@
 import { createClient, groq } from 'next-sanity';
 import { cache } from 'react';
+import imageUrlBuilder from '@sanity/image-url';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID; // "pv8y60vp"
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET; // "production"
@@ -14,3 +16,9 @@ const client = createClient({
 
 // Wrap the cache function in a way that reuses the TypeScript definitions
 export const clientFetch = cache(client.fetch.bind(client));
+
+const builder = imageUrlBuilder(client);
+
+export const urlFor = (source: SanityImageSource) => {
+  return builder.image(source);
+};
