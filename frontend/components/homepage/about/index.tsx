@@ -13,9 +13,7 @@ interface Props {
 }
 
 export function AboutSection({ title = '', content = [], image }: Props): JSX.Element {
-  console.log({ image })
   const url = urlFor(image).width(500).height(500).fit('fill').quality(80).auto('format').url()
-  // console.log(url)
   return (
     <section className='container grid min-h-screen gap-10 py-5 mx-auto lg:grid-cols-2'>
       <div className='px-3 mb-10'>
