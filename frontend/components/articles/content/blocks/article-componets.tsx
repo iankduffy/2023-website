@@ -1,19 +1,31 @@
+import { PortableTextBlock } from "@portabletext/types";
 import { Heading } from "./headings";
 import dynamic from "next/dynamic";
+import { Code } from "./code";
+import { PortableTextBlockComponent, PortableTextComponents } from "@portabletext/react";
 const CodeBlock = dynamic(() =>
   import(`./code`).then((mod) => mod.CodeBlock))
 
-export const articleSerializers = {
+interface Headers {
+  node: PortableTextBlock
+  children: JSX.Element
+}
+
+export const articleSerializers: PortableTextComponents = {
   block: {
-    h1: (props) => <Heading {...props} classNames='px-4 mb-2 text-3xl font-bold lg:px-0' />,
-    h2: (props) => <Heading {...props} classNames='px-4 mb-2 text-3xl font-bold lg:px-0' />,
-    h3: (props) => <Heading {...props} classNames='px-4 mb-2 text-2xl font-bold lg:px-0' />,
-    h4: (props) => <Heading {...props} classNames='px-4 mb-2 text-xl font-bold lg:px-0' />,
-    h5: (props) => <Heading {...props} classNames='px-4 mb-2 text-xl font-bold lg:px-0' />,
-    h6: (props) => <Heading {...props} classNames='px-4 mb-2 text-xl font-bold lg:px-0' />,
-    normal: ({ children }) => <p className="px-4 mb-4 lg:px-0">{children}</p>,
+    h1: ({ node, children }: Headers) => <Heading node={node} children={children} classNames='px-4 mb-2 text-3xl font-bold lg:px-0' />,
+    h2: ({ node, children }: Headers) => <Heading node={node} children={children} classNames='px-4 mb-2 text-3xl font-bold lg:px-0' />,
+    h3: ({ node, children }: Headers) => <Heading node={node} children={children} classNames='px-4 mb-2 text-2xl font-bold lg:px-0' />,
+    h4: ({ node, children }: Headers) => <Heading node={node} children={children} classNames='px-4 mb-2 text-xl font-bold lg:px-0' />,
+    h5: ({ node, children }: Headers) => <Heading node={node} children={children} classNames='px-4 mb-2 text-xl font-bold lg:px-0' />,
+    h6: ({ node, children }: Headers) => <Heading node={node} children={children} classNames='px-4 mb-2 text-xl font-bold lg:px-0' />,
+    normal: ({ children }: { children: JSX.Element }) => <p className="px-4 mb-4 lg:px-0">{children}</p>,
   },
   types: {
-    code: ({ code }: string) => <CodeBlock code={code} />
+    code: ({ value }: { value: Code }) => {
+      return (
+        <CodeBlock value={value} />
+      )
+    }
   }
 }

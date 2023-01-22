@@ -7,12 +7,20 @@ Refractor.registerLanguage(js)
 Refractor.registerLanguage(scss)
 Refractor.registerLanguage(typescript)
 
-interface Props {
+export interface Code {
+  _key: string,
+  _type: 'code'
+  language: string
   code: string
 }
 
-export function CodeBlock({ code }: Props) {
-  console.log(code)
+interface Props {
+  value: Code
+}
+
+
+export function CodeBlock({ value }: Props) {
+  const { code } = value
   return (
     <Refractor
       language={'scss'}
