@@ -1,32 +1,20 @@
-import { AboutSection } from "components/homepage/about";
-import { Hero } from "components/homepage/hero";
-import { ProjectsShowcase } from "components/homepage/projects";
-import { SkillsSection } from "components/homepage/skills";
-import { clientFetch } from "lib/sanity";
+import { RenderSections } from "lib/render-components";
+import { getHomePage } from "queries/generic-page/home-page";
 
-export async function generateStaticParams() {
-  const genericPage = await getData();
+// export async function generateStaticParams() {
+//   const genericPage = await getData();
 
-  return genericPage.map((page: { slug: { current: string; }; }) => ({
-    slug: page.slug.current,
-  }));
-}
-
-const getData = async () => {
-  const pageContent = await clientFetch('*[_type == "genericPages"]')
-
-  return pageContent
-}
+//   return genericPage.map((page: { slug: { current: string; }; }) => ({
+//     slug: page.slug.current,
+//   }));
+// }
 
 export default async function Home() {
-  const data = await getData()
+  const { page } = await getHomePage()
 
   return (
     <main>
-      <Hero />
-      <SkillsSection />
-      <AboutSection />
-      <ProjectsShowcase />
+      <RenderSections sections={page.content} />
     </main>
   )
 }
