@@ -1,9 +1,12 @@
 import { ArticleCard } from "components/articles/article-card"
+import { ArticleListing } from "components/articles/article-listing"
+import { getAllArticles } from "queries/articles/articles"
 
 const SEARCH_ACTIVE = false
 
+export default async function ArticlePage() {
+  const articles = await getAllArticles()
 
-export default function ArticlePage() {
   return (
     <main className="container px-3 mx-auto mt-20 text-white">
       <h1 className='text-5xl font-bold'>Articles.</h1>
@@ -11,12 +14,7 @@ export default function ArticlePage() {
       {SEARCH_ACTIVE && <div>
         <input type='text' placeholder='Search Articles' className='w-full max-w-lg px-4 py-3 my-4 rounded bg-brandLight' />
       </div>}
-      <section className="max-w-4xl mt-10">
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
-      </section>
+      <ArticleListing articles={articles} />
     </main>
   )
 }
