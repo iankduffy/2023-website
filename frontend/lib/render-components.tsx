@@ -1,19 +1,28 @@
 import { StaticPageComponents } from "components/page-components"
 
-function resolveSections(section) {
+// A Section is a sanity component, which always has a key and type
+// Then other unknow keys
+// Todo: Set up Types for components
+interface Section {
+  _type: string
+  _key: string
+  [key: string]: unknown
+  index?: number
+}
+
+function resolveSections(section: Section) {
   const Section = StaticPageComponents[section._type]
 
   if (Section) {
-    return Section
+    return Section as React.ComponentType
   }
 
   console.error('Cant find section', section) // eslint-disable-line no-console
   return null
 }
 
-export function RenderSections(props: { sections: unknown[] }) {
+export function RenderSections(props: { sections: Section[] }) {
   const { sections } = props
-  console.log({ props })
 
   if (!sections) {
     console.error('Missing section')
@@ -22,11 +31,11 @@ export function RenderSections(props: { sections: unknown[] }) {
   return (
     <>
       {sections.map((section, i) => {
-        const SectionComponent = resolveSections(section)
+        const SectionComponent: React.ComponentType | null = resolveSections(section)
         if (!SectionComponent) {
           return <div>Missing section {section._type}</div>
         }
-        return <SectionComponent {...section} key={section._key} index={i} />
+        return <SectionComponent index={i} {...section} key={section._key} />
       })}
     </>
   )

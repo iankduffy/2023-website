@@ -4,6 +4,7 @@ export interface Props {
   preheader: string
   mainheader: string
   paragraph: string
+  index?: number
 }
 
 // Todo: Get h-screen to ignore the header

@@ -8,10 +8,11 @@ import { urlFor } from 'lib/sanity'
 interface Props {
   title: string
   content: PortableTextBlock[]
-  image: SanityImageSource,
+  image: SanityImageSource
+  index?: number
 }
 
-export function AboutSection({ title = '', content = [], image }: Props) {
+export function AboutSection({ title = '', content = [], image }: Props): JSX.Element {
   console.log({ image })
   const url = urlFor(image).width(500).height(500).fit('fill').quality(80).auto('format').url()
   // console.log(url)

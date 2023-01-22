@@ -1,6 +1,16 @@
 import { PortableText } from '@portabletext/react'
+import type {
+  PortableTextBlock,
+} from '@portabletext/types'
 
-export function SkillsSection({ title = '', content = [], skills = [] }): JSX.Element {
+interface Props {
+  title: string
+  skills: string[]
+  content: PortableTextBlock[]
+  index: number
+}
+
+export function SkillsSection({ title = '', content = [], skills = [], }): JSX.Element {
   return (
     <section className='container min-h-screen px-3 py-5 mx-auto' id='skills'>
       <h2 className='w-1/2 my-2 text-3xl font-bold text-white uppercase lg:text-5xl'>{title}</h2>
