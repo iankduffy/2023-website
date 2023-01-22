@@ -10,3 +10,14 @@ export const getAllArticles = async () => {
 
   return articles;
 };
+
+export const articleFromSlugQuery = `*[_type == "articles" && slug.current == $slug][0] {
+  ...,
+  "estimatedReadingTime": round(length(pt::text(content)) / 5 / 180 )
+}`;
+
+export const getArticleFromSlug = async (slug: string) => {
+  const article = await clientFetch(articleFromSlugQuery, { slug });
+
+  return article;
+};
