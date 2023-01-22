@@ -7,11 +7,12 @@ Refractor.registerLanguage(js)
 Refractor.registerLanguage(scss)
 Refractor.registerLanguage(typescript)
 
-const code = `@container article(maxwidth: 500px) {
-  background: blue; 
-}`
+interface Props {
+  code: string
+}
 
-export function CodeBlock() {
+export function CodeBlock({ code }: Props) {
+  console.log(code)
   return (
     <Refractor
       language={'scss'}

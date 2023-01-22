@@ -14,6 +14,6 @@ export const articleSerializers = {
     normal: ({ children }) => <p className="px-4 mb-4 lg:px-0">{children}</p>,
   },
   types: {
-    code: ({ code }) => <CodeBlock code={code} />
+    code: ({ code }: string) => <CodeBlock code={code} />
   }
 }
