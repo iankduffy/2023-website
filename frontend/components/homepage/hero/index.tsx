@@ -21,7 +21,7 @@ export function Hero({ preheader = '', mainheader = '', paragraph = '' }: Props)
       {/* <HeroLinks /> */}
       <ul className='hidden lg:block absolute top-1/2 right-0 font-bold text-right text-8xl text-brandBackground text-outline font-["arial"] rotate-[10deg] -translate-y-1/2'>
         <li>Javascript</li>
-        <li>CSS</li>
+        <li>SCSS - CSS</li>
         <li>React - NextJS</li>
         <li>Web Performance</li>
       </ul>
