@@ -13,7 +13,6 @@ export interface Code {
   language: string
   code: string
 }
-
 interface Props {
   value: Code
 }
