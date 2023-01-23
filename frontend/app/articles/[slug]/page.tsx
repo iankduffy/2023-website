@@ -7,7 +7,6 @@ import { getArticleFromSlug } from "queries/articles/articles";
 export default async function ArticlePage() {
   const article = await getArticleFromSlug('introduction-to-container-queries')
 
-  console.log(article)
   return (
     <main>
       <ArticleHeader title={article.title} date={article._createdAt} readTime={article.estimatedReadingTime} image={article.image} />

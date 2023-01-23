@@ -1,3 +1,4 @@
+import { PortableTextBlockComponent } from "@portabletext/react";
 import { PortableTextBlock } from "@portabletext/types";
 import { ReactElement } from "react";
 
@@ -7,7 +8,7 @@ interface Props {
   children: JSX.Element
 }
 
-export function Heading({ node, children, classNames }: Props): JSX.Element | null {
+export function Heading({ node, children, classNames }: Props) {
   const { style, _key } = node
 
   const HeadingTag = style
@@ -16,7 +17,7 @@ export function Heading({ node, children, classNames }: Props): JSX.Element | nu
   if (!HeadingTag) return null
 
   return (
-    <HeadingTag HeadingTag className={classNames} id={headingId} >
+    <HeadingTag id={headingId} className={classNames} >
       {children}
     </HeadingTag >
   )
