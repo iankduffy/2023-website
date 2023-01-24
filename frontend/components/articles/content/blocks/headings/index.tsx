@@ -2,22 +2,26 @@ import { PortableTextBlockComponent } from "@portabletext/react";
 import { PortableTextBlock } from "@portabletext/types";
 import { ReactElement } from "react";
 
-interface Props {
-  classNames: string
-  node: PortableTextBlock
-  children: JSX.Element
+interface HeadingProps {
+  [key: string]: string;
 }
 
-export function Heading({ node, children, classNames }: Props) {
-  const { style, _key } = node
+const headingClasses: HeadingProps = {
+  h1: '',
+  h2: 'px-4 mb-2 text-3xl font-bold lg:px-0'
+}
 
-  const HeadingTag = style
+
+export const Heading2: PortableTextBlockComponent = function ({ children, value }) {
+  const { style, _key } = value
+
+  const HeadingTag = style as keyof JSX.IntrinsicElements
   const headingId = `h${_key}`;
 
   if (!HeadingTag) return null
 
   return (
-    <HeadingTag id={headingId} className={classNames} >
+    <HeadingTag id={headingId} className={headingClasses[HeadingTag]}>
       {children}
     </HeadingTag >
   )
