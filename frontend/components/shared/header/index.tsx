@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { Navigation } from "../navigation";
 
-// Question: Could this be better in Grid
 export function Header({ }): JSX.Element {
   return (
-    <header className='relative'>
+    <header className='relative py-4'>
       <div className='container flex items-center justify-between gap-5 px-3 py-5 mx-auto text-white lg:py-0'>
-        <nav className='w-1/5 lg:order-2 lg:w-full lg:text-center'><Navigation /></nav>
+        <nav className='w-1/5 lg:order-2 lg:w-full lg:text-center empty:hidden'><Navigation /></nav>
         <Link href='/' className='lg:w-1/5'>
           <img src="/logo.svg" width="50" height="50" alt="Ian Duffy Logo" className='' />
         </Link>

@@ -10,5 +10,11 @@ export default {
       description: 'Choose page to be the frontpage',
       to: {type: 'genericPages'},
     },
+    {
+      name: 'mainNavigation',
+      type: 'array',
+      title: 'Main Navigation',
+      of: [{type: 'navItem'}],
+    },
   ],
 }
