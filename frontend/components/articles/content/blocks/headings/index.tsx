@@ -1,6 +1,4 @@
 import { PortableTextBlockComponent } from "@portabletext/react";
-import { PortableTextBlock } from "@portabletext/types";
-import { ReactElement } from "react";
 
 interface HeadingProps {
   [key: string]: string;

@@ -1,15 +1,18 @@
 import { PortableText } from "@portabletext/react";
 import { PortableTextBlock } from "@portabletext/types";
+import { contentTableSerializers } from "./blocks";
 interface Props {
   articleHeaders: PortableTextBlock[]
 }
 
 export function MobileContentTable({ articleHeaders }: Props) {
   return (
-    <div className='container px-4 mx-auto my-5 lg:hidden'>
-      <details className='p-2 text-white rounded bg-brandLight '>
-        <summary className=''>Table of Contents</summary>
-        <PortableText value={articleHeaders} />
+    <div className='container mx-auto my-5 lg:hidden sticky top-0'>
+      <details className='py-2 px-4 text-white bg-brandLight '>
+        <summary className='text-xl font-bold'>Table of Contents</summary>
+        <div className='flex flex-col gap-1 mt-2'>
+          <PortableText value={articleHeaders} components={contentTableSerializers} />
+        </div>
       </details>
     </div>
   )
