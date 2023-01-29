@@ -1,6 +1,6 @@
 import Refractor from 'react-refractor'
 import js from 'refractor/lang/javascript'
-import scss from 'refractor/lang/scss'
+import scss from 'refractor/lang/css'
 import typescript from 'refractor/lang/typescript'
 
 Refractor.registerLanguage(js)
@@ -19,10 +19,10 @@ interface Props {
 
 
 export function CodeBlock({ value }: Props) {
-  const { code } = value
+  const { code, language } = value
   return (
     <Refractor
-      language={'scss'}
+      language={language}
       value={code}
       className='p-3 mx-4 mb-4 overflow-x-scroll rounded bg-brandLight lg:mx-0'
     />

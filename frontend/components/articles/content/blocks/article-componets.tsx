@@ -2,6 +2,7 @@ import { Heading2 } from "./headings";
 import dynamic from "next/dynamic";
 import { Code } from "./code";
 import { PortableTextComponents } from "@portabletext/react";
+import { Picture } from "./picture";
 
 const CodeBlock = dynamic(() =>
   import(`./code`).then((mod) => mod.CodeBlock))
@@ -24,6 +25,7 @@ export const articleSerializers: PortableTextComponents | undefined = {
       return (
         <CodeBlock value={value} />
       )
-    }
+    },
+    picture: Picture,
   }
 }
