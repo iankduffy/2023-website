@@ -23,10 +23,15 @@ export default {
       },
     },
     {
+      title: 'Cover Image',
+      name: 'image',
+      type: 'image',
+    },
+    {
       title: 'Content',
       name: 'content',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'block'}, {type: 'code'}, {type: 'picture'}],
     },
   ],
 }
