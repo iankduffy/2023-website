@@ -13,7 +13,8 @@ const headingClasses: HeadingClasses = {
   h4: 'block text-light hover:text-white cursor-pointer ml-4 text-lg',
 }
 
-// Next13 App currently has a issue with linking to hash. 
+// Next13 App currently has a issue with linking to hash
+// Once fix this will be disabled.
 const NEXT_LINK_13_BROKEN = true
 const ContentLink: PortableTextBlockComponent = function ({ value, children }) {
   const { style, _key } = value
