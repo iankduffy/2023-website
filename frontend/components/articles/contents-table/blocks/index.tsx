@@ -1,3 +1,4 @@
+'use client'
 import { PortableTextBlockComponent, PortableTextComponents } from "@portabletext/react"
 import Link from 'next/link'
 
@@ -12,14 +13,21 @@ const headingClasses: HeadingClasses = {
   h4: 'block text-light hover:text-white cursor-pointer ml-4 text-lg',
 }
 
-
+// Next13 App currently has a issue with linking to hash. 
+const NEXT_LINK_13_BROKEN = true
 const ContentLink: PortableTextBlockComponent = function ({ value, children }) {
   const { style, _key } = value
 
-  const headingId = `h${_key}`
+  const headingId = `#h${_key}`
+
+  if (NEXT_LINK_13_BROKEN) {
+    return (
+      <a href={headingId} className={headingClasses[style as string]}>{children}</a>
+    )
+  }
 
   return (
-    <Link href={`#${headingId}`} className={headingClasses[style as string]}>
+    <Link href={`${headingId}`} className={headingClasses[style as string]}>
       {children}
     </Link>
   )
@@ -33,8 +41,5 @@ export const contentTableSerializers: PortableTextComponents | undefined = {
     h4: ContentLink,
     h5: ContentLink,
     h6: ContentLink,
-    // normal: ({ value, children }) => (
-    //   <p className="px-4 mb-4 lg:px-0">{children}</p>
-    // )
   }
 }

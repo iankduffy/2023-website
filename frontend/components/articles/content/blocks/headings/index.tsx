@@ -21,10 +21,10 @@ export const Heading2: PortableTextBlockComponent = function ({ children, value 
   if (!HeadingTag) return null
 
   return (
-    <Link href={`#${headingId}`} shallow={true} scroll={true}>
-      <HeadingTag id={headingId} className={headingClasses[HeadingTag]}>
+    <Link href={`#${headingId}`} shallow={true} scroll={true} id={headingId}>
+      <p className={headingClasses[HeadingTag]}>
         {children}
-      </HeadingTag >
+      </p>
     </Link>
   )
 }

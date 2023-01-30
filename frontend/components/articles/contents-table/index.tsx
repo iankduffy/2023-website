@@ -1,3 +1,4 @@
+'use client'
 import { PortableText } from "@portabletext/react";
 import { PortableTextBlock } from "@portabletext/types";
 import { contentTableSerializers } from "./blocks";
