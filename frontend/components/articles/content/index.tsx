@@ -1,5 +1,4 @@
 import { PortableTextBlock } from "@portabletext/types";
-import { CodeBlock } from "./blocks/code";
 import { PortableText } from "@portabletext/react";
 import { articleSerializers } from "./blocks/article-componets";
 
