@@ -3,9 +3,12 @@ import dynamic from "next/dynamic";
 import { Code } from "./code";
 import { PortableTextComponents } from "@portabletext/react";
 import { Picture } from "./picture";
+import { ArticleVideo } from "./articleVideo";
 
 const CodeBlock = dynamic(() =>
   import(`./code`).then((mod) => mod.CodeBlock))
+
+const ArticleVideoBlock = dynamic(() => import('./articleVideo').then((mod) => mod.ArticleVideo))
 
 // Todo: Find correct types for this
 export const articleSerializers: PortableTextComponents | undefined = {
@@ -27,5 +30,6 @@ export const articleSerializers: PortableTextComponents | undefined = {
       )
     },
     picture: Picture,
+    articleVideo: ArticleVideoBlock
   }
 }

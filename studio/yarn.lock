@@ -5678,7 +5678,7 @@ sanity-diff-patch@^1.0.9:
   dependencies:
     diff-match-patch "^1.0.5"
 
-sanity-plugin-mux-input@2.0.8:
+sanity-plugin-mux-input@^2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/sanity-plugin-mux-input/-/sanity-plugin-mux-input-2.0.8.tgz#2f970c1038f28d7cebafd47afeb0a8f09dfc71ab"
   integrity sha512-FjZHC8LpSsRCw5cOUfiZJL7iybeEYk1YKVSXr+u4SMorUsWfH28D9M0O5iwXDVMjVVOENqi7o+6XBB9q3gIdIQ==
