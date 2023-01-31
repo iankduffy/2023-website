@@ -13,7 +13,13 @@ export const getAllArticles = async () => {
 
 export const articleFromSlugQuery = `*[_type == "articles" && slug.current == $slug][0] {
   ...,
-  "estimatedReadingTime": round(length(pt::text(content)) / 5 / 180 )
+  "estimatedReadingTime": round(length(pt::text(content)) / 5 / 180 ),
+  content[]{
+    ...,
+    video {
+      asset->{...}
+    }
+  }
 }`;
 
 export const getArticleFromSlug = async (slug: string) => {
