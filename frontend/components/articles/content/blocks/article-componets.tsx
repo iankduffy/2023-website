@@ -4,6 +4,7 @@ import { Code } from "./code";
 import { PortableTextComponents } from "@portabletext/react";
 import { Picture } from "./picture";
 import { ArticleVideo } from "./articleVideo";
+import { getComponent } from "./custom-article-components";
 
 const CodeBlock = dynamic(() =>
   import(`./code`).then((mod) => mod.CodeBlock))
@@ -30,6 +31,11 @@ export const articleSerializers: PortableTextComponents | undefined = {
       )
     },
     picture: Picture,
-    articleVideo: ArticleVideoBlock
+    articleVideo: ArticleVideoBlock,
+    articleCustomComp: ({ value }) => {
+      const Comp = getComponent(value.component)
+
+      return Comp
+    }
   }
 }
