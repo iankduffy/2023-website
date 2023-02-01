@@ -10,7 +10,6 @@ export const CustomArticleComponents: Props = {
 
 export function getComponent(component: string) {
   const Component = CustomArticleComponents[component] as React.ComponentType
-  console.log(CustomArticleComponents[component], 1)
 
   if (!Component) {
     console.error('Cant find section', component) // eslint-disable-line no-console
