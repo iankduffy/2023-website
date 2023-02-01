@@ -8,7 +8,10 @@ export default {
       type: 'string',
       title: 'Frontend End Set Up Component',
       options: {
-        list: [{title: 'Dumby Component', value: 'dumb'}],
+        list: [
+          {title: 'Dumby Component', value: 'dumb'},
+          {title: 'Container Queries Article Row', value: 'articleContainerQueriesRow'},
+        ],
       },
     },
   ],

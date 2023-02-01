@@ -1,0 +1,12 @@
+
+.container {
+  container-type: inline-size;
+  container-name: article;
+  width: 100%;
+}
+
+@container article (min-width: 20vw) {
+  .article{
+    color: red;
+  }
+}
