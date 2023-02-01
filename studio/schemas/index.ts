@@ -5,6 +5,7 @@ import {compTypes} from './objects/page-components'
 import navItem from './objects/navigation/nav-item'
 import picture from './objects/blocksContent/picture'
 import articleVideo from './objects/blocksContent/mux-video'
+import articleCustomComponent from './objects/blocksContent/article-custom-component'
 
 export const schemaTypes = [
   genericPages,
@@ -14,4 +15,5 @@ export const schemaTypes = [
   picture,
   navItem,
   articleVideo,
+  articleCustomComponent,
 ]
