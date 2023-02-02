@@ -6,6 +6,7 @@ interface Props {
 
 export const CustomArticleComponents: Props = {
   dumb: dynamic(() => import(`./dumb`).then((mod) => mod.Dumb)),
+  articleContainerQueriesRow: dynamic(() => import(`./container-queries-article-row`).then((mod) => mod.ArticleContainerQueriesRow))
 }
 
 export function getComponent(component: string) {
