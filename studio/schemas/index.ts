@@ -6,6 +6,7 @@ import navItem from './objects/navigation/nav-item'
 import picture from './objects/blocksContent/picture'
 import articleVideo from './objects/blocksContent/mux-video'
 import articleCustomComponent from './objects/blocksContent/article-custom-component'
+import canIUse from './objects/blocksContent/can-i-use'
 
 export const schemaTypes = [
   genericPages,
@@ -16,4 +17,5 @@ export const schemaTypes = [
   navItem,
   articleVideo,
   articleCustomComponent,
+  canIUse,
 ]
