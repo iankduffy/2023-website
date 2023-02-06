@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from "react"
 import styles from './styles.module.scss'
 
@@ -20,18 +19,18 @@ function ArticleCard() {
 }
 
 export function ArticleContainerQueriesRow() {
-  const [articleNumber, setArticleNumber] = useState(3)
+  const [articleNumber, setArticleNumber] = useState(2)
 
   return (
     <section className="px-4 mb-4 lg:px-0">
       <ul className='flex justify-between w-full gap-5'>
-        {[...Array(articleNumber)].map((x, i) =>
-          <ArticleCard />
+        {[...Array(articleNumber)].map((x, key) =>
+          <ArticleCard key={key} />
         )}
       </ul>
       {/* Article Row */}
       <div className='flex justify-center gap-5 my-5'>
-        <button className='px-4 py-2 text-white bg-brandLight' onClick={() => setArticleNumber(curr => curr + 1)} disabled={articleNumber >= 3 ? true : false}>Add Item</button>
+        <button className='px-4 py-2 text-white bg-brandLight' onClick={() => setArticleNumber(curr => curr + 1)} disabled={articleNumber >= 2 ? true : false}>Add Item</button>
         <button className='px-4 py-2 text-white bg-brandLight' onClick={() => setArticleNumber(curr => curr - 1)} disabled={articleNumber <= 1 ? true : false}>Remove Item</button>
       </div>
     </section >
