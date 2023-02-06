@@ -37,6 +37,7 @@ export default {
         {type: 'picture'},
         {type: 'articleVideo'},
         {type: 'articleCustomComp'},
+        {type: 'canIUse'},
       ],
     },
   ],
