@@ -14,3 +14,45 @@ details > summary::-webkit-details-marker {
   -webkit-text-stroke: 2px #192536;
   text-stroke: 2px #192536;
 }
+
+@keyframes fadeIn {
+  0% { 
+    opacity: 0; 
+    transform: translateY(10%);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+.animateIn {
+  opacity: 0;
+
+  &.visible {
+    animation: fadeIn 700ms forwards;
+    animation-delay: var(--delay, 500);
+
+    .fadeInChild {
+      opacity: 0;
+      animation: fadeIn 700ms forwards;
+      animation-delay: var(--delay, 500);
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+.animateInParent {
+  * {
+    opacity: 0;
+  }
+
+  &.visible * {
+    animation: fadeIn 700ms forwards;
+    animation-delay: var(--delay, 500);
+  }
+}
