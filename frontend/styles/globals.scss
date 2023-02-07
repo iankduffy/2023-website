@@ -63,3 +63,15 @@ details > summary::-webkit-details-marker {
     animation-delay: var(--delay, 500);
   }
 }
+
+.no-js {
+  .animateInParent * {
+    animation: none !important;
+    opacity: 1;
+  }
+
+  .animateIn {
+    opacity: 1;
+    animation: none !important;
+  }
+}
