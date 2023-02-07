@@ -41,14 +41,21 @@ details > summary::-webkit-details-marker {
   }
 
   @media (prefers-reduced-motion) {
-    opacity: 1;
-    animation: none;
+    &.visible, &.visible .fadeInChild {
+      opacity: 1;
+      animation: none !important;
+    }
   }
 }
 
 .animateInParent {
   * {
     opacity: 0;
+
+    @media (prefers-reduced-motion) { 
+      animation: none !important;
+      opacity: 1;
+    }
   }
 
   &.visible * {
