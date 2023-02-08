@@ -7,9 +7,9 @@ interface HeadingProps {
 
 const headingClasses: HeadingProps = {
   h1: '',
-  h2: 'px-4 my-2 text-3xl font-bold lg:px-0',
-  h3: 'px-4 my-2 text-2xl font-bold lg:px-0',
-  h4: 'px-4 my-2 text-xl font-bold lg:px-0',
+  h2: 'px-4 my-2 text-3xl font-bold lg:px-0 scroll-mt-12 scroll-smooth',
+  h3: 'px-4 my-2 text-2xl font-bold lg:px-0 scroll-mt-12',
+  h4: 'px-4 my-2 text-xl font-bold lg:px-0 scroll-mt-12',
 }
 
 // Next13 App currently has a issue with linking to hash

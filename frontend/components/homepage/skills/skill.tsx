@@ -10,7 +10,6 @@ export function Skills({ skills }: { skills: string[] }) {
   })
   const isVisible = entry?.isIntersecting
 
-
   return (
     <ul ref={ref} className='grid gap-2 my-5 text-4xl font-bold uppercase text-light t lg:grid-cols-2 sibling-hover:text-[#344256]'>
       {skills.map((skill, index) => {
