@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {codeInput} from '@sanity/code-input'
 import {muxInput} from 'sanity-plugin-mux-input'
+import {CVGenerator} from './plugins/cv-plugin'
 
 export default defineConfig({
   name: 'default',
