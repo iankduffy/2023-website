@@ -1,27 +1,25 @@
 import { CvBlock } from './blocks'
 import styles from './styles.module.scss'
-import { urlFor } from '../../../frontend/lib/sanity'
-export function AsideCV({ aside }) {
-  const { logo, name, jobTitle, links, blocks } = aside
 
-  // const image = urlFor(logo).url()
-  // console.log(image)
+export function AsideCV({ aside }: { aside: any }) {
+  const { name, jobTitle, links, blocks } = aside
+
   return (
-    <div>
+    <div className={styles.asideContainer}>
       <div className={styles.topSection}>
-        <img src='https://www.iankduffy.com/logo.svg' className={styles.logo} loading='eager' />
+        <img src='https://www.iankduffy.com/logo.svg' className={styles.logo} loading='eager' width={50} height={50} alt='Logo' />
         <h1>{name}</h1>
         <p>{jobTitle}</p>
       </div>
       <ul>
-        {links.map(link => {
+        {links.map((link: any) => {
           return <li key={link._key}>
             {link.url}
           </li>
         })}
       </ul>
-      <div>
-        {blocks.map(block => {
+      <div className={styles.asideContainer}>
+        {blocks.map((block: any) => {
           return (<CvBlock block={block} key={block._key} />)
         })}
       </div>

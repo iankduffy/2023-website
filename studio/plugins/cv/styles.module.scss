@@ -36,6 +36,7 @@
   color: white;
   padding: var(--layout-padding);
   font-family: 'Arial';
+  // font-size: 2em
 }
 
 @page {
@@ -72,12 +73,12 @@
     font-size: 14pt;
     margin-bottom: 5px;
   }
-
-
 }
 
 .topSection {
   text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 .main {
@@ -87,6 +88,12 @@
   h2, h3 {
     color: var(--brand);
   }
+}
+
+.asideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .icon {
@@ -105,10 +112,20 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 .logo {
-  max-width: 50px;
+  max-width: 70px;
   margin-bottom: 10px;
+}
+
+.skills {
+  ul {
+    margin-left: 13px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
 }
