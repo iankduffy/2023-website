@@ -15,13 +15,17 @@
     "sanity"
   ],
   "dependencies": {
+    "@portabletext/react": "^2.0.1",
     "@sanity/code-input": "^4.0.0",
     "@sanity/vision": "^3.0.0",
+    "jspdf": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
+    "react-to-print": "^2.14.11",
     "sanity": "^3.0.0",
     "sanity-plugin-mux-input": "^2.0.8",
+    "sass": "^1.58.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
