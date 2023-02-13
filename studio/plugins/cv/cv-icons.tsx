@@ -1,5 +1,5 @@
 import { IoMdSchool, IoMdPerson } from 'react-icons/io'
-import { FaLinkedin, FaGlobeEurope, FaEnvelope, FaCogs, FaHeart, FaBriefcase } from 'react-icons/Fa'
+import { FaLinkedin, FaGlobeEurope, FaEnvelope, FaCogs, FaHeart, FaBriefcase } from 'react-icons/fa'
 import { HiDotsHorizontal } from 'react-icons/hi'
 export const iconOptions = [
   { title: 'Web', value: 'web' },
