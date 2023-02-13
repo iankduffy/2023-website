@@ -73,6 +73,13 @@
     font-size: 14pt;
     margin-bottom: 5px;
   }
+
+  .jobTitle {
+    font-size: 18pt;
+    margin-bottom: 10px;
+    font-weight: 800;
+
+  }
 }
 
 .topSection {
@@ -99,13 +106,17 @@
 .icon {
   width: 30px; 
   height: 30px;
-  background: var(--brand);
   color: var(--background);
-  border-radius: 50%;
   overflow: hidden;
+  line-height: 1;
   display: grid;
   place-content: center;
-  line-height: 1;
+
+  .main & {
+    background: var(--brand);
+    padding: 4px;
+    border-radius: 50%;
+  }
 }
 
 .header {
@@ -128,4 +139,10 @@
   li {
     margin-bottom: 5px;
   }
+}
+
+.link {
+  display: flex;
+  gap: 7px;
+  align-content: center;
 }

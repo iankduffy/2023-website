@@ -29,7 +29,8 @@ export function CV({ document }: { document: any }) {
               return (
                 <CvBlock block={section} key={section._key} />
               )
-            })}</main>
+            })}
+          </main>
         </div>
       </div>
     </div>
