@@ -14,8 +14,6 @@ export function CV({ document }: { document: any }) {
     content: () => ref.current,
   });
 
-  console.log(published)
-
   return (
     <div>
       <div>
