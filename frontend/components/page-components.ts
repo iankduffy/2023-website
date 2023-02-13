@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import { LoadableComponent } from 'next/dynamic';
 interface Props {
   [key: string]: unknown;
 }

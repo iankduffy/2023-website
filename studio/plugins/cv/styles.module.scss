@@ -1,0 +1,148 @@
+
+:root {
+  --background: white;
+  --brand: rgb(21 34 51);
+  --layout-padding: 20px;
+}
+
+.container {
+  margin: auto; 
+  width: 21cm;
+  max-height: 29.7cm;
+  position: relative;
+  padding: 10px;
+
+  p {
+    // font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  * {
+    margin: 0;
+    padding:0;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background: var(--background);
+  min-height: 100%;
+  font-family: 'Arial';
+}
+
+.aside {
+  background: var(--brand);
+  color: white;
+  padding: var(--layout-padding);
+  font-family: 'Arial';
+  // font-size: 2em
+}
+
+@page {
+  font-family: 'Arial';
+
+  p {
+    font-size: 80%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 80%;
+  }
+}
+
+@media print {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-size: 11pt;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 16pt;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 14pt;
+    margin-bottom: 5px;
+  }
+
+  .jobTitle {
+    font-size: 18pt;
+    margin-bottom: 10px;
+    font-weight: 800;
+
+  }
+}
+
+.topSection {
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.main {
+  color: black;
+  margin: 20px 20px;
+
+  h2, h3 {
+    color: var(--brand);
+  }
+}
+
+.asideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icon {
+  width: 30px; 
+  height: 30px;
+  color: var(--background);
+  overflow: hidden;
+  line-height: 1;
+  display: grid;
+  place-content: center;
+
+  .main & {
+    background: var(--brand);
+    padding: 4px;
+    border-radius: 50%;
+  }
+}
+
+.header {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.logo {
+  max-width: 70px;
+  margin-bottom: 10px;
+}
+
+.skills {
+  ul {
+    margin-left: 13px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.link {
+  display: flex;
+  gap: 7px;
+  align-content: center;
+}
