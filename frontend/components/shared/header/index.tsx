@@ -9,7 +9,6 @@ import {FaLinkedin,FaGithub} from 'react-icons/fa'
 // https://github.com/vercel/next.js/issues/43537
 export async function Header({ }): any {
   const {cv, linkedin, github} = await getSiteSettings()
-  console.log(cv)
   return (
     <header className='relative py-4'>
       <div className='container flex items-center justify-between gap-5 px-3 py-5 mx-auto text-white lg:py-0'>
