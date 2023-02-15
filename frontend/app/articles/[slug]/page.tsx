@@ -16,7 +16,7 @@ export default async function ArticlePage({ params }: { params: { slug: string }
 
   return (
     <main className='scroll-smooth'>
-      <ArticleHeader title={article.title} date={article._createdAt} readTime={article.estimatedReadingTime} image={article.image} />
+      <ArticleHeader title={article?.title} date={article._createdAt} readTime={article.estimatedReadingTime} image={article.image} />
       <div className='container gap-5 mx-auto lg:px-4 lg:grid lg:grid-cols-article'>
         <div>
           <MobileContentTable articleHeaders={articleHeaders} />

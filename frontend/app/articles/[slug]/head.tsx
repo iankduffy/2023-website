@@ -7,7 +7,7 @@ interface Props {
 export default async function Head({ params }: { params: { slug: string } }) {
   const { slug }: Props = params
   const article = await getArticleFromSlug(slug)
-  const pageTitle = `${article.title} | iankduffy.com`
+  const pageTitle = `${article?.title} | iankduffy.com`
 
   return (
     <>
