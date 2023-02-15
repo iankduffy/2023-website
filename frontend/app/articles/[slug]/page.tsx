@@ -12,7 +12,7 @@ interface Props {
 export default async function ArticlePage({ params }: { params: { slug: string } }) {
   const { slug }: Props = params
   const article = await getArticleFromSlug(slug)
-  const articleHeaders = await getContentHeader(article.content)
+  const articleHeaders = await getContentHeader(article?.content)
 
   return (
     <main className='scroll-smooth'>
