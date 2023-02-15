@@ -3,7 +3,6 @@ import { Content } from "components/articles/content";
 import { MobileContentTable } from "components/articles/contents-table";
 import { DesktopContentsTable } from "components/articles/contents-table/desktop-contents";
 import { getContentHeader } from "lib/article/getContentHeaders";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { getArticleFromSlug } from "queries/articles/articles";
 
 interface Props {
