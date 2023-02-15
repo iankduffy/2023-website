@@ -1,0 +1,17 @@
+:root  {
+	--background: rgb(33 53 79); 
+	--color: white; 
+}
+
+.secondary {
+	--background: transparent; 
+	--color: white; 
+}
+
+.button {
+	background: var(--background); 
+	color: var(--color);
+	display: block;
+	text-align: center;
+	cursor: pointer;
+}

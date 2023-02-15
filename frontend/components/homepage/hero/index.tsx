@@ -1,3 +1,4 @@
+import { getSiteSettings } from "queries/layout/siteSettings";
 import { HeroLinks } from "./links";
 
 export interface Props {
@@ -7,8 +8,12 @@ export interface Props {
   index?: number
 }
 
-// Todo: Get h-screen to ignore the header
-export function Hero({ preheader = '', mainheader = '', paragraph = '' }: Props): JSX.Element {
+// @ts-expect-error
+// Issue with server components
+// Should be Promise<JSX.Element> | null 
+// https://github.com/vercel/next.js/issues/43537
+export async function Hero({ preheader = '', mainheader = '', paragraph = '' }: Props): any {
+  const {cv} = await getSiteSettings()
   return (
     <section className='container relative flex flex-col justify-between h-screen px-3 pt-20 mx-auto'>
       <div className="relative z-10">
@@ -17,6 +22,10 @@ export function Hero({ preheader = '', mainheader = '', paragraph = '' }: Props)
           {mainheader}
         </h1>
         <p className='max-w-xl pr-6 text-light lg:text-lg'>{paragraph}</p>
+        <div className="flex gap-3 item-center my-5">
+          <a className='button py-2 px-4' href='mailto:i.duffy7999@gmail.com' target='_blank'>Contact Me</a>
+          <a className='button secondary py-2 px-5' href={cv} target='_blank'>Download CV</a>
+        </div>
       </div>
       {/* <HeroLinks /> */}
       <ul className='hidden lg:block absolute top-1/2 right-0 font-bold text-right text-8xl text-brandBackground text-outline font-["arial"] rotate-[10deg] -translate-y-1/2'>
