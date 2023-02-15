@@ -16,5 +16,20 @@ export default {
       title: 'Main Navigation',
       of: [{type: 'navItem'}],
     },
+    {
+      name: 'cv', 
+      type: 'file', 
+      title: 'CV'
+    },
+    {
+      name: 'linkedin', 
+      type: 'url', 
+      title: 'Linkedin'
+    },
+    {
+      name: 'github', 
+      type: 'url', 
+      title: 'github'
+    }
   ],
 }

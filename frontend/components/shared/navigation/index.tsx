@@ -27,7 +27,7 @@ interface MainNavigation {
 // Issue with server components
 // Should be Promise<JSX.Element> | null 
 // https://github.com/vercel/next.js/issues/43537
-export async function Navigation(): any {
+export async function Navigation(): any  {
   const { mainNavigation }: MainNavigation = await getNavigation()
 
   if (!mainNavigation.length) return null
