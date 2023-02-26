@@ -12,7 +12,7 @@ interface Props {
 // Do we want a hero image ?
 export function ArticleHeader({ title, date, readTime, image }: Props) {
   const publishedDate = new Date(date).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
-  const url = urlFor(image).fit('fill').width(1248).height(700).quality(80).auto('format').url()
+  const url = image ? urlFor(image).fit('fill').width(1248).height(700).quality(80).auto('format').url() : ''
   return (
     <section className='container mx-auto mt-10'>
       <div className='px-4 mb-4'>
@@ -22,7 +22,7 @@ export function ArticleHeader({ title, date, readTime, image }: Props) {
           <p>{readTime} mins read</p>
         </div>
       </div>
-      <img className='mx-auto overflow-hidden lg:rounded-lg lg:px-4 lg:container' src={url} width={1790} height={1167} loading={'eager'} fetchpriority='high' />
+      {url ? <img className='mx-auto overflow-hidden lg:rounded-lg lg:px-4 lg:container' src={url} width={1790} height={1167} loading={'eager'} fetchpriority='high' /> : ''}
     </section>
   )
 }
