@@ -1,5 +1,11 @@
 import { RenderSections } from "lib/render-components";
 import { getHomePage } from "queries/generic-page/home-page";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home Page | Iankduffy.com',
+  description: 'Homepage | Ian Duffy | Web Developer',
+};
 
 // export async function generateStaticParams() {
 //   const genericPage = await getData();

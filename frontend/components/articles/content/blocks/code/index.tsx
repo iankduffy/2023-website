@@ -1,6 +1,6 @@
 import Refractor from 'react-refractor'
 import js from 'refractor/lang/javascript'
-import scss from 'refractor/lang/css'
+import scss from 'refractor/lang/scss'
 import typescript from 'refractor/lang/typescript'
 
 Refractor.registerLanguage(js)
