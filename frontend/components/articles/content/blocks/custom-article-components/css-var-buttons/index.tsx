@@ -1,7 +1,7 @@
 
 export function CssVarButtons () {
   return (
-    <div className='flex gap-2 justify-center w-full my-10'>
+    <div className='flex gap-2 justify-center w-full my-10 flex-wrap'>
       <button className='button'>Basic Button</button>
       <button className='button success'>Submit Button</button>
       <button className='button danger'>Cancel Button</button>
