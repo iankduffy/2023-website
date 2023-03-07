@@ -21,20 +21,17 @@ function ArticleCard() {
 
 export function ArticleContainerQueries() {
   const [articleNumber, setArticleNumber] = useState(3)
-  var style = window.getComputedStyle(document.documentElement)
-  console.log( style.getPropertyValue('--gutter') ) 
   return (
     <section className="px-4 mb-4 lg:px-0">
+      <div className='flex justify-center gap-5 my-5'>
+        <button className='px-4 py-2 text-white bg-brandLight' onClick={() => setArticleNumber(curr => curr + 1)} disabled={articleNumber >= 3 ? true : false}>Add Item</button>
+        <button className='px-4 py-2 text-white bg-brandLight' onClick={() => setArticleNumber(curr => curr - 1)} disabled={articleNumber <= 1 ? true : false}>Remove Item</button>
+      </div>
       <ul className='flex justify-between w-full gap-5'>
         {[...Array(3)].map((x, i, key) =>
           <ArticleCard key={i}/>
         )}
       </ul>
-      {/* Article Row */}
-      <div className='flex justify-center gap-5 my-5'>
-        {/* <button className='px-4 py-2 text-white bg-brandLight' onClick={() => setArticleNumber(curr => curr + 1)} disabled={articleNumber >= 3 ? true : false}>Add Item</button>
-        <button className='px-4 py-2 text-white bg-brandLight' onClick={() => setArticleNumber(curr => curr - 1)} disabled={articleNumber <= 1 ? true : false}>Remove Item</button> */}
-      </div>
     </section >
   )
 }
