@@ -8,9 +8,9 @@ export const CanIUse: PortableTextTypeComponent = function ({ value }) {
       <picture>
         <source type="image/webp" srcSet={`https://caniuse.bitsofco.de/image/${feature}.webp`} />
         <source type="image/png" srcSet={`https://caniuse.bitsofco.de/image/${feature}.png`} />
-        <img src="https://caniuse.bitsofco.de/image/css-container-queries.jpg" alt={`Data on support for the ${feature} feature across the major browsers from caniuse.com`} loading="lazy" fetchpriority="high" width={800} height={388} />
+        <img src={`https://caniuse.bitsofco.de/image/${feature}.jpg`} alt={`Data on support for the ${feature} feature across the major browsers from caniuse.com`} loading="lazy" fetchPriority="low" width={800} height={388} />
       </picture>
-      <Script src='https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js' />
+      <Script src='https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js' strategy={'lazyOnload'}/>
     </div>
   )
 }
