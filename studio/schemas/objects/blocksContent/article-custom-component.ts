@@ -11,6 +11,7 @@ export default {
         list: [
           {title: 'Dumby Component', value: 'dumb'},
           {title: 'Container Queries Article Row', value: 'articleContainerQueriesRow'},
+          {title: 'CSS Varibles Button', value: 'cssVarButtons'},
         ],
       },
     },

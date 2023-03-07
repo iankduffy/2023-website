@@ -1,0 +1,25 @@
+:root {
+  --maxWidth: 100vw;
+  
+  @media (width >= 640px) { 
+    --maxWidth: 640px;
+  }
+
+  @media (width >= 768px) { 
+    --maxWidth: 768px;
+  }
+
+  @media (width >= 1024px) { 
+    --maxWidth: 1024px;
+  }
+
+  @media (width >= 1280px) { 
+    --maxWidth: 1280px;
+  }
+
+  @media (width >= 1536px) { 
+    --maxWidth: 1536px;
+  }
+
+  --gutter: calc((100vw - var(--maxWidth)) / 2);
+}

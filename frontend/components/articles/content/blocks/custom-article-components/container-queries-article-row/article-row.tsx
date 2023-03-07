@@ -21,7 +21,8 @@ function ArticleCard() {
 
 export function ArticleContainerQueries() {
   const [articleNumber, setArticleNumber] = useState(3)
-
+  var style = window.getComputedStyle(document.documentElement)
+  console.log( style.getPropertyValue('--gutter') ) 
   return (
     <section className="px-4 mb-4 lg:px-0">
       <ul className='flex justify-between w-full gap-5'>

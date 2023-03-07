@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'settings/01-media.scss';
+
+:root {
+  --gutter: calc((100vw - var(--maxWidth)) / 2);
+  --color: blue;
+}
+
 // Todo: can this be done in tailwind
 details > summary {
   list-style: none;
