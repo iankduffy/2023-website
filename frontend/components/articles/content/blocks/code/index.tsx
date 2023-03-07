@@ -16,8 +16,7 @@ export interface Code {
 interface Props {
   value: Code
 }
-
-
+ 
 export function CodeBlock({ value }: Props) {
   const { code, language } = value
   return (
