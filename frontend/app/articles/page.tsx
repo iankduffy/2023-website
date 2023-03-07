@@ -1,8 +1,13 @@
-import { ArticleCard } from "components/articles/article-card"
 import { ArticleListing } from "components/articles/article-listing"
+import { Metadata } from "next";
 import { getAllArticles } from "queries/articles/articles"
 
 const SEARCH_ACTIVE = false
+
+export const metadata: Metadata = {
+  title: 'Articles | Iankduffy.com',
+  description: 'Articles | Ian Duffy | Web Developer',
+};
 
 export default async function ArticlePage() {
   const articles = await getAllArticles()

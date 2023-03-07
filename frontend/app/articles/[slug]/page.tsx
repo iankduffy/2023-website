@@ -9,10 +9,19 @@ interface Props {
   slug: string
 }
 
-export default async function ArticlePage({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: Props }) { 
+  const article = await getArticleFromSlug(params.slug)
+
+  return { 
+    title: `${article.title} | IankDuffy.com`,
+    description: article?.description
+   }
+}
+
+export default async function ArticlePage({ params }: { params: Props }) {
   const { slug }: Props = params
   const article = await getArticleFromSlug(slug)
-  const articleHeaders = await getContentHeader(article?.content)
+  const articleHeaders = getContentHeader(article?.content)
 
   return (
     <main className='scroll-smooth'>

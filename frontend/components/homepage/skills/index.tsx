@@ -13,7 +13,7 @@ interface Props {
 
 export function SkillsSection({ title = '', content = [], skills = [] }: Props): JSX.Element {
   return (
-    <section className='container min-h-screen px-3 py-5 mx-auto' id='skills'>
+    <section className='container min-h-screen px-3 py-5 mx-auto flex flex-col justifty-center' id='skills'>
       <h2 className='w-1/2 my-2 text-3xl font-bold text-white uppercase lg:text-5xl'>{title}</h2>
       <div className='lg:w-1/2 text-light'><PortableText value={content} /></div>
       <div className=''>

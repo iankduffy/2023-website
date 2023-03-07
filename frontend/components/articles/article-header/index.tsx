@@ -22,7 +22,7 @@ export function ArticleHeader({ title, date, readTime, image }: Props) {
           <p>{readTime} mins read</p>
         </div>
       </div>
-      {url ? <img className='mx-auto overflow-hidden lg:rounded-lg lg:px-4 lg:container' src={url} width={1790} height={1167} loading={'eager'} fetchpriority='high' /> : ''}
+      {url ? <img className='mx-auto overflow-hidden lg:rounded-lg lg:px-4 lg:container' src={url} width={1790} height={1167} loading={'eager'} fetchPriority='high' /> : ''}
     </section>
   )
 }

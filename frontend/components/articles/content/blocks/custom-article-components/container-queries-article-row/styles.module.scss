@@ -3,11 +3,18 @@
   container-type: inline-size;
   container-name: article;
   width: 100%;
+
+  &::after {
+    content: var(--gutter);
+    color: var(--color);
+    display: block;
+  }
 }
 
 .article {
   background: white;
   color: black;
+  padding-left: var(--gutter, 0); 
 }
 
 @container article (min-width: 50cqw) {
