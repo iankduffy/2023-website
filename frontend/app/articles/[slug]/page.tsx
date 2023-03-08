@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Props }) { 
   const article = await getArticleFromSlug(params.slug)
-  const ogImage = article.socialImage ? urlFor(article.socialImage).width(1200).height(630).auto('format').url() : ''
+  const ogImage = article?.socialImage ? urlFor(article.socialImage).width(1200).height(630).auto('format').url() : ''
   return { 
     title: `${article.title} | IankDuffy.com`,
     description: article?.description,
