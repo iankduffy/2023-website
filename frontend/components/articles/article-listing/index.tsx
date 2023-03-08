@@ -14,6 +14,7 @@ interface Article {
   title: string
   estimatedReadingTime: number | null
   content: PortableTextBlock[]
+  publishedDate: string
 }
 
 interface Props {
