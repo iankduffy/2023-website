@@ -7,6 +7,7 @@ interface Props {
   slug: Slug
   _createdAt: string
   estimatedReadingTime: number | null
+  publishedDate: string
 }
 
 export function ArticleCard({ title, description = '', slug, publishedDate, estimatedReadingTime }: Props) {
