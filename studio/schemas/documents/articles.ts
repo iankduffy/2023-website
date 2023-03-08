@@ -14,6 +14,11 @@ export default {
       title: 'Description',
     },
     {
+      name: 'publishedDate', 
+      type: 'date',
+      title: 'Published Date'
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
