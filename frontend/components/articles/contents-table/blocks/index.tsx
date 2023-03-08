@@ -1,4 +1,3 @@
-'use client'
 import { PortableTextBlockComponent, PortableTextComponents } from "@portabletext/react"
 import Link from 'next/link'
 
