@@ -45,5 +45,10 @@ export default {
         {type: 'canIUse'},
       ],
     },
+    {
+      title: 'OG Image',
+      type: 'image',
+      name: 'socialImage'
+    }
   ],
 }
