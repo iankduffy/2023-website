@@ -1,13 +1,24 @@
+import { SanityDocument } from "@sanity/client";
 import { ArticleHeader } from "components/articles/article-header";
 import { Content } from "components/articles/content";
 import { MobileContentTable } from "components/articles/contents-table";
 import { DesktopContentsTable } from "components/articles/contents-table/desktop-contents";
 import { getContentHeader } from "lib/article/getContentHeaders";
 import { urlFor } from "lib/sanity";
-import { getArticleFromSlug } from "queries/articles/articles";
+import { getAllArticles, getArticleFromSlug } from "queries/articles/articles";
 
 interface Props {
   slug: string
+}
+
+export async function generateStaticParams() {
+  const posts = await getAllArticles()
+
+  const slug = posts.map((post: SanityDocument) => ({
+    slug: post.slug.current,
+  }));
+
+  return slug
 }
 
 export async function generateMetadata({ params }: { params: Props }) { 
