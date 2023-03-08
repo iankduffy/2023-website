@@ -1,5 +1,6 @@
 import { PortableTextBlockComponent } from "@portabletext/react";
 import Link from "next/link";
+import { HeadingElement } from "./heading";
 
 interface HeadingProps {
   [key: string]: string;
@@ -26,9 +27,9 @@ export const Heading2: PortableTextBlockComponent = function ({ children, value 
   if (NEXT_LINK_13_BROKEN) {
     return (
       <a href={`#${headingId}`}>
-        <HeadingTag className={headingClasses[HeadingTag]} id={headingId}>
+        <HeadingElement HeadingTag={HeadingTag} classNames={headingClasses[HeadingTag]} headingId={headingId} > 
           {children}
-        </HeadingTag>
+        </HeadingElement >
       </a>
     )
   }
