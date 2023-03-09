@@ -25,7 +25,7 @@ export function HeadingElement({HeadingTag, classNames, headingId, children}: Pr
   }
 
   return (
-    <HeadingTag id={headingId} className={classNames} ref={ref} style={{ 'color': isVisible ? 'red' : false}}>
+    <HeadingTag id={headingId} className={classNames} ref={ref}>
       {children}
     </ HeadingTag>
   )
