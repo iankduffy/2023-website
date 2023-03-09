@@ -1,6 +1,6 @@
 "use client"
 import { useIntersectionObserver } from 'hooks/use-intersection-observer'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { articleContentStore } from 'stores/article-contents'
 
 interface Props {
@@ -18,11 +18,14 @@ export function HeadingElement({HeadingTag, classNames, headingId, children}: Pr
     freezeOnceVisible: false,
     rootMargin: '0% 0% -60% 0%'
   })
+
   const isVisible = entry?.isIntersecting
 
-  if (isVisible) {
-    setHeader({id: headingId})
-  }
+  useEffect(() => {
+    if (isVisible) {
+      setHeader({id: headingId})
+    }
+  }, [isVisible])
 
   return (
     <HeadingTag id={headingId} className={classNames} ref={ref}>
