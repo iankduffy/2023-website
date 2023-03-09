@@ -9,9 +9,9 @@ interface HeadingClasses {
 
 const headingClasses: HeadingClasses = {
   h1: '',
-  h2: 'block hover:text-white cursor-pointer text-lg duration-300',
-  h3: 'block hover:text-white cursor-pointer ml-2 text-lg duration-300',
-  h4: 'block hover:text-white cursor-pointer ml-4 text-lg duration-300',
+  h2: 'block hover:text-white cursor-pointer text-lg duration-300 lg:pl-3 transition',
+  h3: 'block hover:text-white cursor-pointer ml-2 text-lg duration-300 lg:pl-3 transition',
+  h4: 'block hover:text-white cursor-pointer ml-4 text-lg duration-300 lg:pl-3 transition',
 }
 
 // Next13 App currently has a issue with linking to hash
@@ -27,7 +27,7 @@ export const ContentLink: PortableTextBlockComponent = function ({ value, childr
 
   if (NEXT_LINK_13_BROKEN) {
     return (
-      <a href={headingId} className={`${headingClasses[style as string]} ${isCurrent} ${isCurrent ? 'text-white' : 'text-light'}`} >{children}</a>
+      <a href={headingId} className={`${headingClasses[style as string]} ${isCurrent} ${isCurrent ? 'text-white scale-105' : 'text-light'}`} >{children}</a>
     )
   }
 
