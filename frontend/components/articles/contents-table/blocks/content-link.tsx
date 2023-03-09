@@ -27,7 +27,7 @@ export const ContentLink: PortableTextBlockComponent = function ({ value, childr
 
   if (NEXT_LINK_13_BROKEN) {
     return (
-      <a href={headingId} className={`${headingClasses[style as string]} ${isCurrent} ${isCurrent ? 'text-white scale-105' : 'text-light'}`} >{children}</a>
+      <a href={headingId} className={`${headingClasses[style as string]} ${isCurrent ? 'text-white scale-105' : 'text-light'}`} >{children}</a>
     )
   }
 
