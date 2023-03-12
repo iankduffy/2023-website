@@ -24,7 +24,7 @@
     "react-is": "^18.2.0",
     "react-to-print": "^2.14.11",
     "sanity": "^3.5.1",
-    "sanity-plugin-mux-input": "^2.0.8",
+    "sanity-plugin-mux-input": "^2.0.16",
     "sass": "^1.58.0",
     "styled-components": "^5.2.0"
   },
