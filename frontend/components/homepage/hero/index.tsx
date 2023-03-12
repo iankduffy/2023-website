@@ -13,7 +13,7 @@ export interface Props {
 // Should be Promise<JSX.Element> | null 
 // https://github.com/vercel/next.js/issues/43537
 export async function Hero({ preheader = '', mainheader = '', paragraph = '' }: Props): any {
-  const {cv} = await getSiteSettings()
+  const { cv } = await getSiteSettings()
   return (
     <section className='container relative flex flex-col justify-between h-screen px-3 pt-20 mx-auto'>
       <div className="relative z-10">

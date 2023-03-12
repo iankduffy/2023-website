@@ -23,7 +23,7 @@ export function CodeBlock({ value }: Props) {
     <Refractor
       language={language}
       value={code}
-      className='p-3 mx-4 mb-4 overflow-x-scroll rounded bg-brandLight lg:mx-0'
+      className='p-3 mx-4 mb-4 overflow-x-scroll rounded bg-brandLight lg:mx-0 whitespace-pre-wrap'
     />
   )
 }
