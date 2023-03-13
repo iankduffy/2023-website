@@ -1,5 +1,9 @@
 import {compTypes} from '../objects/page-components'
 
+const components = compTypes.map(comp => {
+  return { type: comp.name}
+})
+
 export default {
   name: 'genericPages',
   type: 'document',
@@ -28,7 +32,7 @@ export default {
       name: 'content',
       type: 'array',
       title: 'Page sections',
-      of: [{type: 'intro'}, {type: 'skillList'}, {type: 'aboutMe'}],
+      of: components
     },
   ],
 }
