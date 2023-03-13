@@ -1,5 +1,5 @@
 'use client'
-import MuxPlayer from "@mux/mux-player-react"
+import MuxPlayer from "@mux/mux-player-react/lazy"
 
 interface Props {
   playbackId: string
