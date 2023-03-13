@@ -1,4 +1,4 @@
-import { SanityDocument } from "@sanity/client";
+import type { SanityDocument } from "@sanity/client";
 import { ArticleHeader } from "components/articles/article-header";
 import { Content } from "components/articles/content";
 import { MobileContentTable } from "components/articles/contents-table";
@@ -57,11 +57,11 @@ export default async function ArticlePage({ params }: { params: Props }) {
     <main className='scroll-smooth'>
       <ArticleHeader title={article?.title} date={article?.publishedDate} readTime={article?.estimatedReadingTime} image={article?.image} />
       <div className='container gap-5 mx-auto lg:px-4 lg:grid lg:grid-cols-article'>
-        <div>
+        <div className="">
           <MobileContentTable articleHeaders={articleHeaders} />
           <Content content={article?.content} />
         </div>
-        <aside className='hidden lg:block'>
+        <aside className='hidden lg:block min-w-xs'>
           <DesktopContentsTable articleHeaders={articleHeaders} />
         </aside>
       </div>
