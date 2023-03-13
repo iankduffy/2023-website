@@ -1,6 +1,7 @@
 import { Slug } from "types/sanity";
 import { ArticleCard } from "../article-card";
 import { PortableTextBlock } from "@portabletext/types";
+import { AnimateIn } from "components/shared/animateIn";
 
 // Move Article Type to own file
 interface Article {
@@ -33,10 +34,12 @@ export function ArticleListing({ articles }: Props) {
 
   return (
     <section className="max-w-4xl mt-10">
-      {articles.map((article) => {
-        return (
-          <ArticleCard key={article._id} {...article} />
-        )
-      })}
+      <AnimateIn>
+        {articles.map((article, index) => {
+          return (
+            <ArticleCard key={article._id} {...article} index={index} />
+          )
+        })}
+      </AnimateIn>
     </section>)
 }

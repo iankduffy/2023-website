@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { JSXPromise } from 'types/type';
 interface Props {
   [key: string]: unknown;
 }
@@ -11,4 +12,7 @@ export const StaticPageComponents: Props = {
   aboutMe: dynamic(() =>
     import('./homepage/about').then((mod) => mod.AboutSection)
   ),
+  articleSection: dynamic(() => 
+    import('./homepage/articles-listing').then(mod => mod.LatestArticles as JSXPromise)
+  )
 };
